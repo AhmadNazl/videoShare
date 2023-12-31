@@ -9,10 +9,9 @@
                 <h1 class="video-title">{{ $video->name }}</h1>
                 <div class="video-code">
                     <video controls style="height: 100%; width: 100%;">
-                        <source
-                            src="{{ $video->url }}"
+                        <source src="{{ $video->url }}">
                     </video>
-                </div><!-- // video-code -->
+                </div>
                 <P>
                     {{ $video->description }}
                 </P>

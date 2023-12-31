@@ -10,7 +10,7 @@ class Video extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'length', 'slug', 'url', 'thumbnail', 'description'
+        'name', 'length', 'slug', 'url', 'thumbnail', 'description', 'category_id'
     ];
 
     public function getRouteKeyName()
@@ -30,8 +30,17 @@ class Video extends Model
 
     public function relatedVideos(int $count=6)
     {
-        return Video::all()->random($count);
+        return $this->category->getRandomVideos($count);
     }
 
-    
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function getCategoryNameAttribute()
+    {
+        return $this->category?->name;
+    }
 }
+

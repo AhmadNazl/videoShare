@@ -16,7 +16,7 @@
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.length')</label>
-                                <input name="length" type="text" value="{{ old('length') "}} class="form-control" placeholder="@lang('videos.length')">
+                                <input name="length" type="text" value="{{ old('length') }}" class="form-control" placeholder="@lang('videos.length')">
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.slug')</label>
@@ -28,11 +28,19 @@
                             </div>
                             <div class="col-md-6">
                                 <label>@lang('videos.thumbnail')</label>
-                                <input name="thumbnail" type="text" value="{{ old('thumbnail"') }} class="form-control" placeholder="@lang('videos.thumbnail')">
+                                <input name="thumbnail" type="text" value="{{ old('thumbnail') }}" class="form-control" placeholder="@lang('videos.thumbnail')">
+                            </div>
+                            <div class="col-md-6">
+                                <label>دسته بندی</label>
+                                <select class="form-control" name="category_id" id="category">
+                                    @foreach ($categories as $category)
+                                       <option value="{{$category->id}}">{{$category->name}}</option> 
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="col-md-12">
                                 <label>@lang('videos.description')</label>
-                                <textarea name="description" value="{{ old('description') }} class="form-control" rows="4"  placeholder="@lang('videos.description')"></textarea>
+                                <textarea name="description" value="{{ old('description') }}" class="form-control" rows="4"  placeholder="@lang('videos.description')"></textarea>
                             </div>
                             <div class="col-md-6">
                                 <button type="submit" id="contact_submit" class="btn btn-dm">ذخیره</button>

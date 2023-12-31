@@ -22,5 +22,5 @@
                     <x-video-box :video="$video"></x-video-box>
                 @endforeach
             </div>
-        </div><!-- // row -->
+        </div>
 @endsection

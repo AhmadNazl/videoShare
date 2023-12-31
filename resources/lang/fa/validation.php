@@ -1,5 +1,7 @@
 <?php
 
+
+
 return[
     'required' => ':attribute الزامی می باشد',
     'attributes' =>[
@@ -10,5 +12,6 @@ return[
         'thumbnail' => 'تصویر ویدیو',
         'description' => 'توضیحات',
     ],
+    'category_id' => 'دسته بندی',
 
 ];
