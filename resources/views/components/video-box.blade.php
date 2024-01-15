@@ -6,7 +6,7 @@
             <a href="#"><img src="{{ $video->thumbnail }}" alt=""></a>
         </div>
         <div class="video-info">
-            <a class="channel-name" title="{{ $video->description }}" href="{{route('videos.show', $video->slug)}}">{{ $video->name }}<span>
+            <a class="channel-name" title="{{ $video->description }}" href="{{route('videos.show', $video->slug)}}">{{ $video->owner_name }}<span>
                 <a class="channel-name" href="{{route('videos.edit', $video->slug)}}"><span>
                     <i class="fa fa-pencil" style="color: black" aria-hidden="true"></i>
                 </a>

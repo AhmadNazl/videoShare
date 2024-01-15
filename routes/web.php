@@ -23,3 +23,10 @@ Route::get('/videos/{video}', [VideoController::class, 'show'])->name('videos.sh
 Route::get('/videos/{video}/edit', [VideoController::class, 'edit'])->name('videos.edit');
 Route::post('/videos/{video}', [VideoController::class, 'update'])->name('videos.update');
 Route::get('/categories/{category:slug}/videos', [CategoryVideoController::class, 'index'])->name('categories.videos.index');
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
